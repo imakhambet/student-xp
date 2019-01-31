@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li {
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	font-family: 'Monda', sans-serif;
+}
+
+/* 'new entry' */
+h2 {
+	text-align: center;
+	margin: 20px;
+	font-size: 30px;
+}
+
+form {
+	display: block;
+	width: 70%;
+	margin: 0 auto;
+}
+
+#titleForm, #uniForm {
+	width: 100%;
+	height: 31px;
+	border: 2px solid black;
+	padding: 5px;
+	font-size: 15px;
+    margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+#countryForm {
+	height: 31px;
+	border: 2px solid black;
+	padding: 5px;
+	font-size: 15px;
+	width: 250px;
+	height: 40px;
+	display: block;
+	margin: 0 auto 5px auto;
+}
+
+label:not(#imageLabel) {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+textarea {
+	width: 100%;
+	font-size: 20px;
+	display: block;
+    margin: 0px auto 0px auto;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+#fileToUpload {
+	margin: 15px;
+}
+
+.btnPost {	
+	display: block;
+	margin: 0 auto;
+	width: calc(100% + 14px);
+	height: 40px;
+	background: black;
+	color: darkgray;
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 100px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.error{
+	width: 394px;
+	margin: 0px auto 10px auto;
+	padding: 10px;
+	border: 2.5px solid #a94442;
+	color: #a94442;
+	background: #f2dede;
+	text-align: center;
+}
+label span{
+    color: crimson;
+}
+.required span {
+    color:crimson;
+}
+@media screen and (max-width: 600px) {
+	.nav a {
+		margin: 0px;
+	}
+}

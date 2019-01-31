@@ -1,0 +1,78 @@
+*{	margin: 0;	padding: 0;	}
+a{	text-decoration: none;	}
+li {	text-decoration: none; list-style: none;	}
+body {	font-family: 'Monda', sans-serif;	}
+
+h2 {
+	text-align: center;
+	margin: 20px 0 30px 0;
+	font-size: 40px;
+	font-weight: 900;
+	
+}
+
+.form-signup input{
+	display: block;
+	margin: 0px auto 5px auto;
+	width: 400px;
+	height: 30px;
+	padding: 7px;
+	border: 2.5px solid black;
+	font-size: 22px;
+}
+.form-signup label {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;    
+}
+.done {
+	display: block;
+	margin: 15px auto 0 auto;
+	width: 419px;
+	height: 44px;
+	color: darkgray;
+	font-weight: 700;
+	font-size: 22px;
+	background: black;	
+	border: 2.5px solid black;
+	font-size: 22px;
+	cursor: pointer;
+}
+
+#forMember {
+    text-align: center;
+    margin: auto;
+    margin-top: 12px;
+	font-size: 17px;
+}
+.error{
+	width: 394px;
+	margin: 0px auto;
+	padding: 10px;
+	border: 2.5px solid #a94442;
+	color: #a94442;
+	background: #f2dede;
+	text-align: center;
+}
+
+label span{
+    color: crimson;
+}
+.required{
+    text-align: center;
+}
+.required span {
+    color:crimson;
+}
+
+@media screen and (max-width: 540px) {
+    .form-signup input {
+        width: 300px;
+    }
+    .done{
+        width: 319px;
+    }
+    .error {
+        width: 294px;
+    }
+}

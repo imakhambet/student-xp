@@ -1,0 +1,570 @@
+*{	margin: 0;padding: 0;	}
+
+a{	text-decoration: none;	}
+li {	text-decoration: none;list-style: none;	}
+body {	font-family: 'Monda', sans-serif; }
+/*custom scroll*/
+::-webkit-scrollbar{	width: 10px;	}
+::-webkit-scrollbar-track{	background: #fff;	}
+::-webkit-scrollbar-thumb {	background: #888;	}
+::-webkit-scrollbar-thumb:hover {	background: #555;	}
+::-moz-scrollbar{	width: 10px;	}
+::-moz-scrollbar-track{	background: #fff;	}
+::-moz-scrollbar-thumb {	background: #888;	}
+::-moz-scrollbar-thumb:hover {	background: #555;	}
+/*header*/
+.logo {
+	margin-top: 50px;
+	background: #000;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 150px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.graphicLogo {
+	height: 160px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Squada One', cursive;
+    background: linear-gradient(#ba2bba, darkcyan);
+  	background-clip: text;
+  	text-fill-color: transparent;
+    background: -webkit-linear-gradient(#ba2bba, darkcyan);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+.textLogo {
+    display: none;
+    
+}
+
+.graphicLogo p {
+	border-top: 2px solid rgba(45, 181, 181, 0.71);
+	display: none;
+	line-height: 0.9;
+}
+.graphicLogo:hover p, .graphicLogo:active p {
+	display: block;
+	font-size: 50px;
+	margin: 0 auto;
+}
+.graphicLogo:hover span{
+	display: block;
+	font-size: 100px;
+    background: linear-gradient(#ba2bba, darkcyan);
+  	background-clip: text;
+    text-fill-color: transparent;
+    background: -webkit-linear-gradient(#ba2bba, darkcyan);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+nav{
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	background: black;
+}
+nav ul {
+	list-style: none;
+}
+
+nav > ul {
+	display: flex;
+	justify-content: center;
+}
+
+nav a {
+	display: block;
+	padding: 10px;
+	color: darkgray;
+	font-size: 27px;
+	font-weight: bold;
+	margin: 0 20px;
+}
+
+#loginPage, #signupPage {
+	font-weight: 800;
+}
+#logoutNav{
+	color:firebrick;
+}
+#usernameNav {
+	color: dimgray;
+}
+nav a:hover, .newEntry:hover {
+	opacity: 0.5;
+}
+
+nav li ul{
+	position: absolute;
+	width: 185px;
+	z-index: 1;
+	border:not(:top): 2px solid darkgray;
+	display: none;
+	background: radial-gradient(black, dimgray);
+
+}
+
+nav li > ul li:not(:last-child){
+	border-bottom: 1px solid darkgray;
+
+}
+
+nav li > ul li:hover{
+	opacity: 0.7;
+}
+
+nav li > ul li a{
+	margin: auto;
+	padding: 4px;
+	font-size: 15px;
+}
+
+nav li:hover > ul{
+	display: block;
+}
+@media screen and (max-width: 900px) {	
+    header{
+        overflow: hidden;
+    }
+    .graphicLogo {font-size: 130px; height: 150px;}
+	.graphicLogo:hover p{font-size: 35px;}
+	.graphicLogo:hover span{font-size: 107px;}
+}
+@media screen and (max-width: 770px) {
+	nav a {margin: 0 13px; font-size: 25px;}
+	nav li ul{	width: 160px;}
+	.graphicLogo {font-size: 125px; height: 140px;}
+	.graphicLogo:hover p{font-size: 30px;}
+	.graphicLogo:hover span{font-size: 100px;}    
+}
+@media screen and (max-width: 680px) {
+	nav a {margin: 0 9px; font-size: 23px;}
+	nav li ul{	width: 142px;}
+	.graphicLogo {font-size: 107px; height: 125px;}
+	.graphicLogo:hover p{font-size: 25px;}
+	.graphicLogo:hover span{font-size: 90px;}
+}
+@media screen and (max-width: 600px) {
+	nav a {margin: 0 4px; font-size: 21px;}
+	nav li ul{	width: 125px;}
+	.graphicLogo {font-size: 97px;height: 110px;}
+	.graphicLogo:hover p{font-size: 23px;}
+	.graphicLogo:hover span{font-size: 80px;}
+    
+}
+@media screen and (max-width: 560px) {
+	nav a {margin: 0 2px; font-size: 20px;}
+	nav li ul{	width: 120px;}    
+}
+@media screen and (max-width: 500px) {
+	nav a {margin: 0 2px; font-size: 18px;}
+	nav li ul{	width: 120px;}    
+}
+
+/*header*/
+
+/*new entry button*/
+.newEntry{
+	width: 40%;
+	min-width: 300px;
+	text-align: center;
+	margin: 45px auto 30px auto;
+	border: 3px solid black;
+	border-radius: 8px;
+	padding: 10px;
+}
+.newEntry a{
+	font-size: 27px;
+	font-weight: 600;
+	color: black;
+}
+/*modalni okno */
+.modal {
+	display:none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background:rgba(0,0,0,0.9);
+}
+.modal-content{
+	background-color: rgba(168, 50, 50, 0.92);
+	margin: 13% auto;
+	width: 40%;
+	height: 140px;
+	padding: 30px;
+	text-align: center;
+	font-size: 24px;
+	color: black;
+	font-weight: bold;
+	border-radius: 8px;
+}
+.modal-content a {
+	display: block;
+	margin: 10px auto;
+	color: white;
+}
+.close {
+	font-size: 70px;
+	cursor: pointer;
+	color: rgba(168, 50, 50) 
+}
+.modal-content a:hover, .close:hover {
+	opacity: 0.6;
+}
+
+@media screen and (max-width: 679px) {
+    .modal-content { height: 180px;  }
+}
+
+/*entries enscription*/
+.entEnscr h1 {	text-align: center;	}
+
+.entEnscr hr {
+	border: 0; 
+	height: 3px; 
+	width:70%; 
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
+	text-align:center; 
+	margin: 0px auto 40px auto;	
+}
+
+/*content*/
+.content {
+	width: 90%;
+	margin: auto;
+}
+
+.content li {
+	margin: 0 auto;
+	width: 800px;
+	height: 450px;
+	position: relative;
+	margin-bottom: 20px;
+}
+.content img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.post {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 50px;
+	width: 100%;
+	height: calc(100% - 50px);
+	color: white;
+	background-color: rgba(0,0,0,.6);
+	text-align: center;
+	transition: all 1s;
+}
+.descr {
+		font-size: 23px;
+
+}
+.post .post-title{	
+    font-size: 32px;	
+    margin-bottom: 15px; 
+    padding: 30px	
+}
+.post .readMore {
+	font-size: 25px;
+	display: none;
+	transition: all 1s;
+}
+.content li:hover .post {
+	background-color: rgba(0,0,0,0.9);
+}
+.content li:hover .post .readMore {
+	display: block;
+} 
+
+@media screen and (max-width: 920px) {
+	.content li {
+		width: 80%;
+	}
+	.post .post-title{	
+		font-size: 22px;	
+		padding: 10px	
+	}
+	.post .readMore {
+	font-size: 17px;
+	}
+}
+
+
+/*user page*/
+.userInfo{
+	text-align: center;
+	margin: 20px 0 20px 0;
+}
+#aboutMeEns {
+	margin-bottom: 20px;
+}
+#myEntriesEns {	margin-top: 70px;	}
+
+
+/*admin page */
+#todayUsersEns,#todayPostsEns {
+	margin-top: 15px;
+	font-size: 23px;
+}
+#quantityU, #quantityP {
+	font-weight: bold;
+}
+.adminInfo {
+	width: 80%;
+	margin: auto;
+}
+.todaysUsers {
+	margin-bottom: 20px;
+}
+.todaysUsers ul{
+	display: none;
+	overflow-y:auto;
+	margin: auto;
+}
+.todaysUsers li:not(:last-child){
+	border-bottom: 2px solid dimgray;
+	margin-bottom: 20px;
+}
+.todaysUsers p {
+	font-size: 18px;
+}
+.todaysUsers #nameValue, .todaysUsers #emailValue {
+	font-size: 22px;
+	color: dimgray;
+}
+.todaysUsers:hover ul{
+	width: 500px;
+	border: 2px solid dimgray;
+	min-height: 0;
+	max-height: 140px;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.todaysPosts ul{
+	display: none;
+}
+.todaysPosts:hover ul{
+    width: 500px;
+	overflow-y: auto;
+	min-height: 0;
+	max-height: 230px;
+	display: block;
+	border: 2px solid dimgray;
+	margin: auto;
+}
+.todaysPosts li{
+	margin: 0 auto;
+	width: 500px;
+	height: 120px;
+	position: relative;
+}
+.todaysPosts li:not(:last-child){
+	margin-bottom: 40px;
+}
+.todayPost {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	width: 100%;
+	color: white;
+	background-color: rgba(0,0,0,.6);
+	text-align: center;
+}
+#todayTitle{
+	font-weight: normal;
+	font-size: 16px;
+	border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 600px) {
+    .todaysPosts:hover ul, .todaysUsers:hover ul {
+        width: 390px;
+justify-content: center;    }
+}
+
+/*countries.php*/
+.allCountryList {
+	width: 85%;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+.allCountryList a{
+	color: black;
+	font-size: 24px;
+}
+
+.allCountryList a:hover{
+    opacity: 0.5;
+}
+
+.allCountryList li:not(:first-child){
+	margin-top: 15px;
+
+}
+.allCountryList ul{
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
+}
+
+@media screen and (max-width: 850px) {
+	.allCountryList ul{
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+@media screen and (max-width: 550px) {
+	.allCountryList ul{
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
+}
+
+/***single post***/
+.full-post {
+	padding-top: 40px;
+	width: 65%;
+	margin: auto;
+	text-align: center;
+}
+.full-post h2{
+	margin: 40px 0 10px 0;
+}
+.full-post h3 {
+	font-weight: normal;
+}
+.full-post #author, #uniName, #countryName{
+	color: dimgray;
+	font-weight: bold;
+}
+.full-post #author {
+	font-size: 23px;
+}
+
+.full-post img {
+	max-width: 100%;
+    height: auto;
+    width: auto;
+}
+.full-post hr {
+    margin: auto;
+}
+.post-body {
+	background-color: #f9f9f9;
+	width: 100%;
+	text-align: center;
+	margin: 30px auto;
+	margin-bottom: 40px;
+	border: outset;
+	padding: 10px;
+}
+.post-body p {
+	max-width: 100%;
+    word-wrap: break-word;
+}
+#contactAuthor {
+	margin-bottom: 20px;
+}
+#delPost, #delAcc {
+	border-color: firebrick;
+	margin-top: 30px;
+	padding: 10px;
+	background: firebrick;
+	border-radius: 10px;
+	font-weight: 600;
+	font-size: 18px;
+	color: white;
+}
+/***single post***/
+
+
+/***footer***/
+footer {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	width: 100%;
+	background: black;
+	height: 160px;
+	color: white;
+	font-family: 'Monda', sans-serif;
+	font-size: 20px;
+	bottom: 0;
+    margin-top: 80px;
+}
+.contact a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	margin: 3px;
+}
+.contact {
+	margin: 0px 0 0 30px;
+    padding-top: 20px;
+}
+
+#copyright {
+	font-size: 17px;
+	width: 100%;
+	display: block;
+	text-align: center;
+	position: absolute;
+}
+
+@media screen and (max-width: 600px) {
+	#copyright {
+        text-align: left;
+        font-size: 17px;
+        margin-left: 30%;
+        margin-top: 8px;
+        width: 33%;
+	}
+    footer {
+        height: 170px;
+    }
+}
+.logotype {
+	float: right;
+	margin-top: 20px;
+	margin-right: 30px;
+}
+/***footer***/
+
+@media print {
+    nav {
+        border-bottom: 1px solid black;
+    }
+    .graphicLogo {
+        display: none;
+    }
+
+    .textLogo {
+        display: block;
+        font-size: 80px;
+    }
+    
+    .content li {
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+    }
+    footer {
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+    }
+}
