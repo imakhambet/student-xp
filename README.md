@@ -1,4 +1,5 @@
 student XP - blog pro studenty, kteří studují v zahraničí
+student XP - blog for students studying abroad
 
 http://wa.toad.cz/~ismukmak/ZWA/
 
