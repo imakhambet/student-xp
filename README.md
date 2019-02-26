@@ -1,4 +1,4 @@
-<h3>student XP<h3>
+<h2>student XP</h2>
 
 <p>
   student XP - blog pro studenty, kteří studují v zahraničí 
