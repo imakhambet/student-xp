@@ -1,4 +1,4 @@
-<h1 style="text-align: center">student XP</h1>
+<h1 style="text-align:center;">student XP</h1>
 student XP - blog pro studenty, kteří studují v zahraničí
 student XP - blog for students studying abroad
 
