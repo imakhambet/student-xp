@@ -1,4 +1,4 @@
-<h1>student XP<h1>
+<h3>student XP<h3>
 
 <p>
   student XP - blog pro studenty, kteří studují v zahraničí 
@@ -8,7 +8,8 @@
   <a href="https://github.com/imakhambet/student-xp/blob/master/Documentation%20for%20%22Student%20XP%22.pdf">Dokumentace</a> 
 </p>
 
-<p>student XP - blog for students studying abroad 
+<p>
+  student XP - blog for students studying abroad 
   <br>
   <a href="http://wa.toad.cz/~ismukmak/ZWA/">Link</a>
   <br>
